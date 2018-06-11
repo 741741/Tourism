@@ -1,0 +1,63 @@
+<view>
+  <view class='banner'>
+    <image src='../../../../img/3.jpg'></image>
+  </view>
+  <!-- 标题 -->
+  <view class='list_title'>
+    <view class='list_title_tit'>
+      <view>
+        <image class='icon' src='../../../../img/34.png'></image>
+        <text class='tit-tit'> {{tit}}</text> 
+      </view>
+      <view class='link_comment'>
+        <text>点评（</text>{{num}}<text></text><text> 条）</text>
+      </view>
+    </view>
+    <view class='des_first'>{{touch_poi}}</view>
+  </view>
+  <!-- 列表 -->
+  <view class='list_item'>
+    <view class='list list_pack clrfix'>
+      <text class='item_tit'>人均：</text>
+      <text class='item_cout'>{{money}}元</text>
+    </view>
+     <view class='list list_pack clrfix'>
+      <text class='item_tit'>特色：</text>
+      <text class='item_cout'>{{eat}}</text>
+    </view>
+    <view class='list list_pack clrfix'>
+      <text class='item_tit'>类别：</text>
+      <text class='item_cout'>{{snack}}</text>
+    </view>
+    <view class='list list_pack clrfix'>
+      <text class='item_tit'>地址：</text>
+      <text class='item_cout'>{{address}}</text>
+    </view>
+     <view class='list list_pack clrfix'>
+      <text class='item_tit'></text>
+      <text class='item_couts holiday'>{{holiday}}</text>
+      <view class='more_link2'>
+          <image src='../../../../img/3 (1).png' class=" icons hide{{showView?'show':''}}" bindtap="onChangeShowState" ></image>  
+          <image src='../../../../img/3 (2).png' class=" icons hide{{showView?'':'show'}}" bindtap="onChangeShowState"></image>  
+      </view>
+    </view>
+
+    
+    <view class="hide{{showView?'':'show'}}">
+      <view class='list list_pack clrfix'>
+        <text class='item_tit'>交通指南：</text>
+        <view class=' car'>
+          <text class='item_cout'>{{car}}</text>
+          <text class='item_cout'>{{load}}</text>
+        </view>
+      </view>
+      <view class='list list_pack clrfix'>
+        <text class='item_tit'>小贴士：</text>
+        <text class='item_cout'>{{tips}}</text>
+      </view>
+    </view>
+
+
+
+  </view>
+</view>

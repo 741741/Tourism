@@ -1,0 +1,57 @@
+<view class='footprint'>
+  <view class='banner'>
+    <image class=" banner_img {{currentTab==0?'active':''}}" src='../../../img/22.jpg'></image>
+    <image class=" banner_img {{currentTab==1?'active':''}}" src='../../../img/20.jpg'></image>
+  </view>
+  <view class='footprint_text'>
+    <text class="tab-item {{currentTab==0?'active':''}}" data-current="0"  bindtap="swichNav">足迹</text>
+    <text class="tab-item {{currentTab==1?'active':''}}"  data-current="1"  bindtap="swichNav">游记</text>
+  </view>
+  <view class=" travels" >
+    <view  class="right-item {{currentTab==0?'active':''}}" wx:for="{{[0,1,2]}}" >
+      <view wx:for="{{local}}" wx:key="{{item.id}}" class='local'  >
+        <view class='data'>{{item.data}}</view>
+        <view class='footprint_content'>
+          <view class='fo_info'>
+            <view class='fo_img'> <image src='{{item.img}}'></image> </view>
+            <view class='fo_text'>
+              <view class='fo_title'>{{item.title}}</view>
+              <view class='fo_start'>
+                <image src="../../../img/36.png"></image>
+                <image src="../../../img/36.png"></image>
+                <image src="../../../img/36.png"></image>
+                <image src="../../../img/36.png"></image>
+                <image src="../../../img/36.png"></image>
+              </view>
+              <view class='fo_city'>出发城市：{{item.city}}</view>
+              <view class='fo_city'>行程：{{item.days}} 天</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="right-item {{currentTab==1?'active':''}}" wx:for="{{[0,1,2]}}">
+      <view wx:for="{{local}}" wx:key="{{item.id}}">
+        <view  class='right_cont'>
+          <view class='travels_tu'>
+            <image src='{{item.img}}'></image>
+          </view> 
+          <view class='travels_title'>
+            <view >{{item.title}}</view>
+            <view class='travels_title_cont'>{{item.content}}</view>
+          </view>
+        </view>
+        <view  class='right_cont'>
+          <view class='travels_title'>
+            <view>{{item.title1}}</view>
+            <view class='travels_title_cont'>{{item.content1}}</view>
+          </view>
+          <view class='travels_tu'>
+            <image src='{{item.img1}}'></image>
+          </view> 
+        </view>
+      </view>
+    </view> 
+  </view>
+    
+</view>

@@ -1,0 +1,38 @@
+<view class='play'>
+  <view class='play_title'>
+    <view class='activities' >
+      <text class="activity hide {{showView?'show':''}}">全部活动</text>
+       <!-- <text class="activity hide {{showView?'':'show'}}" bindtap='sel'>发现城市</text>  -->
+      <!-- <text class='triangle'></text> -->
+    </view>
+    <view>列表模式</view>
+  </view>
+  <view class=" filterlayer  {{showView?'show':''}} "  style=' display: none; '>
+    <view class='ul' >
+      <view class="current {{currentTab==0?'active':''}} ">全部活动</view>
+      <view class="current {{currentTab==1?'active':''}} ">发现城市</view>
+    </view>
+  </view>
+
+
+  <view class='paly_city' wx:for="{{[0,1,2]}}">
+    <view class='city' wx:for="{{city}}" wx:key="item.id">
+      <view class='imgbox'>
+        <view class='text'>{{item.text}}</view>
+        <image src='{{item.img}}' class='bg'></image>
+        <view class='ptitle'>{{item.conver}}</view>
+      </view>
+      <view class='city_content'>
+        <p class="city_info">{{item.cont}}</p>
+        <view class='info_money'>
+          <view >
+            <image src='{{item.icon}}' class='icon'></image>
+            <text class='data'>{{item.data}}</text>
+          </view>
+          <view class='money'><text>{{item.money}}</text>元起</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+</view>

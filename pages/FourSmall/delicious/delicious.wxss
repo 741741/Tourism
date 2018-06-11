@@ -1,0 +1,254 @@
+.restaurant{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 10px 6px;
+  border-bottom: 1px solid #E8E8E8;
+}
+.rest{
+  position: relative;
+  width: 17%;
+}
+.activity{
+  font-size: 14px;
+  
+}
+.restaurant text.triangle{
+   display:block;
+    width:0;
+    height:0;
+    border-width:5px 5px 0;
+    border-style:solid;
+    border-color:#444444 transparent transparent;
+    position:absolute;
+    top:14px;
+    right:-10px;
+}
+/* 隐藏框开始 */
+.yo-modal {
+    overflow: hidden;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.2);
+}
+.yo-modal-top {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    top: 55px;
+    bottom: 0px;
+    transform: translate3d(0px, 0px, 0px);
+}
+.fade-in-down {
+    -webkit-animation-name: fade-in-down;
+    animation-name: fade-in-down;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    animation-duration: 200ms;
+    width: 100%;
+    height: auto;
+    visibility: visible;
+}
+.yo-modal>.cont {
+    position: relative;
+    overflow: hidden;
+    width:100%;
+    background:#fff;
+    border-top:1px solid #ccc;
+}
+.b_dialog_menufilter {
+    background-color: #fff;
+    width: 100%;
+    height: 350px;
+    padding: 0;
+}
+.b_dialog_menufilter .r_contbox {
+    height: 350px;
+    width: 60%;
+    float: right;
+}
+
+/* 左边的  */
+.l_menubox {
+    background-color: #f7f7f7;
+    height: 350px;
+    width: 35%;
+}
+.listbox {
+    height: 350px;
+    verflow: hidden;
+    padding-bottom: 0px;
+}
+.scroller{
+  transform: translate(0px, 0px) translateZ(0px);
+}
+.yo-list{
+  position: relative;
+    z-index: 0;
+}
+.b_dialog_menufilter .item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.yo-list>.item {
+    overflow: hidden;
+    position: relative;
+    line-height:40px;
+    text-align: center;
+    font-size: 12px;
+    border-bottom:  1px solid #EBEBEB;
+}
+.front {
+    padding: 11p 10px 12px;
+}
+
+ .current{
+    background-color: #fff;
+    color: #06A0E0;
+    display: block !important;
+}
+/* 右边的 */
+.lists{
+  border-bottom:  1px solid #EBEBEB;
+  text-align: left;
+  display: none;
+  padding-left: 10px;
+}
+.link2 {
+    font-size: 15px;
+    color: #333;
+}
+.des {
+    font-size: 12px;
+    color: #999;
+}
+.hide{
+ display: none;
+}
+.show{ 
+ display: block;
+}
+.hideshow{
+  color: #06A0E0;
+  border-color:#444444 transparent transparent;
+}
+
+/* 隐藏框开始 */
+
+
+
+
+
+.scroll-view_H{
+   width: 90%;
+  height: 100px;
+  background: #F6F8F8;
+  overflow: hidden; 
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+.scroll-view_H view{
+  width: 150px;
+  height: 100%;
+  /* float: left; */
+  margin-right: 10px;
+  border-radius: 5px;
+}
+#green{
+  background: green;
+}
+#red{
+  background: red;
+}
+#yellow{
+  background: yellow;
+}
+#blue{
+  background: paleturquoise;
+}
+
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view-item{
+  height: 200px;
+}
+.scroll-view-item_H{
+  display: inline-block;
+  width: 100%;
+  height: 200px;
+}
+.scroll-view-item_H image{
+  width: 100%;
+  height: 100%;
+}
+
+
+/* 美食 */
+ .list_link {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    width: 100%;
+    padding: 10px 15px;
+    overflow: hidden;
+    height: 100px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.list_link{
+  line-height:29px;         
+}
+.titbox{
+  font-size: 16px !important;
+}
+.comment{
+  font-size: 14px;
+}
+.imgbox{
+  width: 110px;
+  height: 80px;
+  margin-right: 10px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.imgbox image{
+  width: 100%;
+  height: 100%;
+}
+.start{
+  float: left;
+}
+.start image{
+ width: 10px;
+ height: 10px;
+}
+
+.tag{
+ color: #ff8300;
+}
+.price{
+ color: #616161;
+}
+.itembox{
+  font-size: 14px;
+}

@@ -1,0 +1,14 @@
+<view class="travel">
+  <view  class='bg'>
+    <image src="../../img/22.jpg"></image>
+    <view class='bg_portrait'>
+      <image src='../../img/2.jpg'></image>
+      <text>大哈哈</text>
+    </view>
+  </view>
+  <view wx:for="{{objectArray}}" wx:key="id" data-id='{{item.id}}' class='travel_list'  bindtap='gotoIndex'>
+    <text class='travel_list_name'>{{item.unique}}</text> 
+    <text class='travel_list_Symbol'> > </text>
+  </view>
+  <button class='login' bindtap='Sign'>退出登录</button>
+</view>

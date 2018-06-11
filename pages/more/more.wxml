@@ -1,0 +1,13 @@
+<view class='list_content' >
+  <view  wx:for="{{[0,1,2]}}">
+    <view wx:for="{{objectArray}}" wx:key="text" class='list_cont'>
+    <view class='list_img' >
+      <image src='{{item.img}}'></image>
+    </view>
+    <view class='list_info'>
+      <text>{{item.text}}</text>
+      <text >{{item.text}}</text>
+    </view>
+  </view>
+  </view>
+</view>

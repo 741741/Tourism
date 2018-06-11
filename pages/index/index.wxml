@@ -1,0 +1,40 @@
+<view class="travel">
+<!-- 轮播图 -->
+  <swiper class='animation' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <swiper-item wx:for="{{objectArray}}" wx:key="unique"> 
+      <view class="swiper-item " >
+        <image src="{{item.img}}" ></image>
+      </view>
+    </swiper-item>
+  </swiper>
+<!-- 轮播图 -->
+
+  <view class='tu_cont'>
+    <view class="travel_content_tu" wx:for="{{objectArray}}" wx:key="unique">
+      <view class='wind_img'  data-id='{{item.id}}' bindtap='gotoIndex' >
+        <view class='wind_imgs'>
+          <image src="{{item.imges}}" ></image>
+        </view>
+      </view>
+      <text class='num'>{{item.unique}}</text> 
+    </view>
+  </view> 
+
+  <!-- 为您推荐  -->
+  <view wx:for="{{[0,1,2]}}">
+    <view class='recommended ' wx:for= "{{Recommended}}" wx:key='title'>
+      <view class='recommended_title'>
+        <text>{{item.title}}</text>
+        <text class='more' bindtap='mores'>更多 > </text>
+      </view>
+      <scroll-view class='diagram'>
+        <view class='diagram_img' wx:for= "{{item.img}}" bindtap='imgtop'>
+          <image src="{{item.imges}}"></image>
+          <text class='diagram_text'>{{item.text}}</text>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <!-- 为您推荐  -->
+</view>

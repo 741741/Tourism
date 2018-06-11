@@ -1,0 +1,30 @@
+<view class='together'>
+  <view class='together_title'>
+    <view class='h1'>结伴同游</view>
+    <view class='bbsTips'>521445个帖子</view>
+  </view>
+  <view class='banner'>
+    <image src="../../../img/1.jpg"></image>
+  </view>
+  <view>
+    <view class='topic'>
+      <text class="Hot_topic {{currentTab==0?'hot':''}}" data-current="0" bindtap="swichNav"> 全部</text>
+      <text class="{{currentTab==1?'hot':''}}" data-current="1" bindtap="swichNav"> 精华</text>
+    </view>
+    <view >
+      <view class=" sation {{currentTab==0?'active':''}}" wx:for="{{topic}}" wx:key="id">
+        <view class='conver'>{{item.conver}}</view>
+        <view class='name'>
+          <view>
+            <text>{{item.em}}</text>|<text>{{item.data}}</text>
+          </view>
+          <view>
+            <image class='icon' src='{{item.icon}}'></image><text>{{item.num}}</text>|
+            <image class='icon' src='{{item.icon1}}'></image><text>{{item.nums}}</text>
+          </view>
+        </view>
+      </view>
+      <view class=" sation {{currentTab==1?'active':''}}" wx:for="{{week}}" wx:key="id">{{item.conver}}</view>
+    </view>
+  </view>
+</view>

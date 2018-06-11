@@ -1,0 +1,7 @@
+<view class='game'>
+  <view class='game_cont'>
+    <!-- <view class='modular' wx:for="{{[0,1,2]}}" > -->
+      <view wx:for="{{games}}" wx:key="id" class="block " data-id='{{item.id}}' bindtap='select'>{{item.text}}</view>
+    <!-- </view> -->
+  </view>
+</view>

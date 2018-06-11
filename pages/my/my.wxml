@@ -1,0 +1,12 @@
+<view class="my">
+  <view class='my_title'>
+   <view>专属于我的旅行</view>
+   <view >
+    <button class='login' bindtap="logins">登录/注册</button>
+   </view>
+  </view>
+  <view wx:for="{{objectArray}}" wx:key="unique" class='travel_list' bindtap='selectmap'>
+     <text class='travel_list_name'>{{item.unique}}</text> 
+     <text class='travel_list_Symbol'> > </text>
+  </view>
+</view>

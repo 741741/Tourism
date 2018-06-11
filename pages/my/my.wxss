@@ -1,0 +1,33 @@
+.my{
+   height: 100vh;
+   background: #F2F3F7;
+}
+.my_title{
+  text-align: center;
+  padding-top: 23px;
+}
+button.login{
+  width:90px;
+  height:30px;
+  background: #EAA02C;
+  color: #fff;
+  margin-top:12px;
+  line-height:30px;
+  font-size: 12px;
+  margin-bottom:50px;
+}
+
+/* 列表开始 */
+.travel_list{
+  overflow: hidden;
+  padding: 12px 15px;
+  border-bottom: 1px solid #ECECEC;
+  background: #fff;
+}
+.travel_list_name{
+  float: left;
+}
+.travel_list_Symbol{
+  float: right;
+}
+/* 列表结束 */

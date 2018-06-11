@@ -1,0 +1,52 @@
+<view class='img_details'>
+  <view class='banner'>
+    <image src='../../../img/20.jpg'></image>
+  </view>
+
+  <view class='info'>
+    <!-- 推荐指数 -->
+    <view class='dation'>
+      <text class='title'>推荐指数</text>
+      <view class='dation_start'>
+        <image src="../../../img/36.png"></image>
+        <image src="../../../img/36.png"></image>
+        <image src="../../../img/36.png"></image>
+        <image src="../../../img/36.png"></image>
+        <image src="../../../img/36.png"></image>
+      </view>
+    </view>
+    <!-- 详细介绍 -->
+    <view class='introduce'>
+      <view class='title'>详细介绍</view>
+      <view class="paragraph"> {{cont}}  </view> 
+    </view>
+    <!-- 相关景点 -->
+    <!-- <view class='introduce'>
+      <view class='title'>相关景点</view>
+      <view class='spots'>
+        <view class='spots_symbol'> ← </view> 
+          <view  class='scenic '>
+            <image src="{{item.img}}" wx:for='{{spot}}' wx:key="id"></image>
+          </view>  
+        <view class='spots_symbol'> → </view>
+      </view> -->
+    <!-- </view> -->
+  </view>
+ 
+
+
+  <view class='operation'>
+    <view class='list'>
+      <view class='list_img'>
+        <image src='../../../img/35 (2).png'></image>
+      </view>
+      <text>去看看</text>
+    </view>
+    <view class='list'>
+      <view class='list_img'>
+        <image src='../../../img/35 (1).png'></image>
+      </view>
+      <text>吃喝玩乐</text>
+    </view>
+  </view>
+</view>

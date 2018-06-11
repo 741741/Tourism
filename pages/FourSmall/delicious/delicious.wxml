@@ -1,0 +1,92 @@
+<view>
+  <view class='restaurant'>
+    <view class="rest  hide{{showView?'show':''}}">
+     <text class="activity " bindtap="onChangeShowState" >全部餐厅</text>
+     <text class="triangle hide{{showView?'show':''}}"></text>
+    </view>
+    <view class="rest hide{{showView?'':'show'}}">
+     <text class="activity   " bindtap="onChangeShowState">全部餐厅</text>
+     <text class="triangle hide{{showView?'':'show'}}"></text>
+    </view> 
+    <!-- <view class="rest">
+     <text class="activity" >距离不限</text>
+     <text class='triangle'></text>
+    </view> -->
+    <view class="rest" style='margin-right: 10px;'>
+     <text class="activity" >餐厅</text>
+     <!-- <text class='triangle'></text> -->
+    </view>
+  </view>
+  <view class=" yo-modal yo-modal-top hide {{showView?' ':'show'}} ">
+    <view class='cont e_tagsbox fade-in-down ani'>
+      <view class='b_dialog_menufilter'>
+        <view class='b_dialog_menufilter'>
+          <view class='r_contbox'>
+            <view  class='yo-scroller listbox'>
+              <view class='yo-list' >
+                <view class='item list'> 
+                <view wx:for="{{gourmet}}"  class="lists   {{currentTab==0?'current':''}}">
+                  <view class='link2'> {{item.restaurant}}</view>
+                  <view class='des'>{{item.des}}</view>
+                </view>
+                <view wx:for="{{characteristic}}" class="lists  {{currentTab==1?'current':''}}">
+                  <view class='link2'> {{item.restaurant}}</view>
+                </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class='l_menubox'>
+            <view class='yo-scroller listbox'>
+              <view class='scroller'>
+                <view class='yo-list' >
+                  <view class="item list  {{currentTab==0?'current':''}}" data-current="0"  bindtap="swichNav">美食林餐厅</view>
+                   <view class="item list {{currentTab==1?'current':''}}" data-current="1" bindtap="swichNav">特色</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%"  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll"  scroll-left="{{scrollLeft}}">
+      <view id="green" class="scroll-view-item_H bc_green">
+        <image src='../../../img/20.jpg'></image>
+      </view>
+      <view id="red"  class="scroll-view-item_H bc_red">
+        <image src='../../../img/27.jpg'></image>
+      </view>
+      <view id="yellow" class="scroll-view-item_H bc_yellow">
+        <image src='../../../img/22.jpg'></image>
+      </view>
+      <view id="blue" class="scroll-view-item_H bc_blue">
+        <image src='../../../img/23.jpg'></image>
+      </view>
+  </scroll-view>
+  <view class='item'>
+    <view wx:for="{{scroll}}" wx:key="item.id" class='list_link'> 
+      <view class='imgbox' bindtap='food'>
+        <image src='{{item.imges}}' ></image>
+      </view>
+      <view class='list_txt'>
+        <view class='titbox'>{{item.text}}</view>
+        <view class='itembox'>
+          <view class='start' >
+            <image src='{{item.start}}' ></image>
+            <image src='{{item.start}}' ></image>
+            <image src='{{item.start}}' ></image>
+          </view>
+          <text class='comment'>{{item.num}}条评论</text>
+        </view>
+        <view class='itembox'>
+          <text class='tag'>{{item.tag}}</text>
+          <text class='price'>￥{{item.price}}/人</text>
+        </view>
+      </view>
+    </view>
+  </view>
+ 
+</view>

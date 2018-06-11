@@ -1,0 +1,27 @@
+.game{
+  width: 100%;
+  height: auto;
+  background: #F1F2F6;
+  padding: 15px 10px;
+}
+.game_cont{
+  overflow: hidden;
+}
+.modular{
+  overflow: hidden;
+}
+.block{
+  width: 94%;
+  height: 204px;
+  line-height: 204px;
+  background: #06A0E0;
+  border-radius: 61px;
+  text-align: center;
+  color: #fff;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.box1{
+  background: palevioletred;
+}

@@ -1,0 +1,60 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/list_info/info",
+    "pages/logs/logs",
+    "pages/travel/travel",    
+    "pages/my/my",
+    "pages/my/map/map",
+    "pages/my/trip/trip",
+    "pages/my/notepad/notepad",
+    "pages/my/addnote/addnote",
+    "pages/my/calculation/calculation",
+    "pages/login/login",
+    "pages/more/more",
+    "pages/game/game",
+    "pages/game/Two/Two",
+    "pages/game/snack/snack",
+    "pages/FourSmall/strategy/strategy",
+    "pages/FourSmall/plaything/plaything",
+    "pages/FourSmall/together/together",
+    "pages/FourSmall/delicious/delicious",
+    "pages/FourSmall/delicious/delicacy/delicacy"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "说走就走的旅行",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+        "list": [
+          {
+            "selectedIconPath": "img/11.png",
+            "iconPath": "img/8.png",
+            "pagePath": "pages/index/index",
+            "text": "首页"
+          },
+          {
+            "selectedIconPath": "img/15 (2).png",
+            "iconPath": "img/15 (1).png",
+            "pagePath": "pages/game/game",
+            "text": "小游戏"
+          },
+          {
+            "selectedIconPath": "img/10.png",
+            "iconPath": "img/9.png",
+            "pagePath": "pages/travel/travel",
+            "text": "我的 "
+          }
+        ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

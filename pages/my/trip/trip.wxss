@@ -1,0 +1,156 @@
+.banner{
+  width: 100%;
+  height: 150px;
+}
+.banner image{
+  width: 100%;
+  height: 100%;
+}
+.banner_img{
+  display: none;
+}
+.banner .active{
+  display: block;
+}
+
+.footprint_text{
+   display: flex;
+  justify-content: space-between; 
+  border-bottom: 2px solid #48B4F8;
+  position: relative;
+}
+.footprint_text .tab-item{
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.footprint_text text.active{
+ /* color: #fff;
+ background: #48B4F8; */
+ color: #48B4F8;
+}
+.footprint_text text.active::after{
+  content: " ";
+  text-align: center;
+  /* position: absolute;
+  bottom: 0;
+  left: 23%; */
+  width: 0;
+  height: 0;
+  border-bottom: 5px solid  #48B4F8 ;
+  border-left: 5px solid transparent ;
+  border-right: 5px solid transparent ;
+}
+
+
+/* 足迹 */
+.local{
+  height: 125px;
+  display: flex;
+  justify-content: space-around;
+}
+.data{
+  height:125px;
+  width: 27%;
+  text-align:center;
+  line-height:125px;
+  position: relative;
+}
+.data::after{
+  content: " ";
+  position: absolute;
+  top: 45%;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #48B4F8;
+}
+
+.travels{
+margin-bottom: 20px;
+}
+.travels .active{
+  display: block;
+}
+.right-item{
+  display: none;
+}
+.footprint_content{
+  width: 80%;
+  height:125px;
+  border-left: 1px solid #ccc;
+}
+.fo_img{
+  width: 37%;
+  height: 113px;
+  float: left;
+  margin-right: 10px;
+}
+.fo_img image{
+  width: 100%;
+  height: 100%;
+}
+.fo_info{
+  width:84%;
+  height: 113px;
+  margin-top: 10px;
+  margin-left: 7%;
+  margin-right: 7%;
+  border: 1px solid #48B4F8;
+  background: #F2F2F2;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.fo_text{
+   width: 57%;
+}
+.fo_text view{
+  margin-bottom: 5px;
+}
+.fo_start image{
+  width: 10px;
+  height: 10px;
+}
+.fo_title{
+  font-size: 16px;
+}
+.fo_city{
+  font-size: 15px;
+}
+/* 足迹 */
+
+
+/* 游记 */
+.right_cont{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  padding: 10px;
+}
+.travels_tu{
+  width: 120px;
+  height: 115px;
+}
+.travels_tu image{
+  width: 100%;
+  height: 100%;
+}
+.travels_title{
+  width: 50%;
+  background: #F8F9FB;
+}
+.travels_title_cont{
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-top: 8px;
+  overflow: hidden;
+  height:82px;
+  width: 169px;
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp:5;
+}
+/* 游记 */

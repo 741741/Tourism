@@ -1,0 +1,27 @@
+<view>
+  <!-- 热门话题 -->
+  <view>
+    <view class='topic'>
+      <text class="Hot_topic {{currentTab==0?'hot':''}}" data-current="0" bindtap="swichNav"> 热门话题</text>
+      <text class="{{currentTab==1?'hot':''}}" data-current="1" bindtap="swichNav"> 一周内热贴</text>
+    </view>
+    <view >
+      <view class=" sation {{currentTab==0?'active':''}}" wx:for="{{topic}}" wx:key="id">{{item.conver}}</view>
+      <view class=" sation {{currentTab==1?'active':''}}" wx:for="{{week}}" wx:key="id">{{item.conver}}</view>
+    </view>
+  </view>
+  <!-- 兴趣小组 -->
+  <view wx:for="{{[0,1,2]}}">
+    <view  wx:for="{{group}}">
+      <view class='topic title'>{{item.title}}</view>
+      <view class='group' >
+        <view  class='small'  wx:for="{{item.group_list}}">
+          <image src="{{item.img}}"></image>
+          <text class='txt'>{{item.text}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  
+</view>

@@ -1,0 +1,50 @@
+.body{
+  height: 100vh;
+  background: #f5f5f5;
+}
+
+.banner{
+  max-height: 149px;
+  overflow: hidden; 
+}
+.banner image {
+  vertical-align: top;
+  width: 100%;
+}
+
+.section{
+  margin-bottom: 9px;
+    padding: 8px 15px;
+    border-bottom: 1px solid #d7d7d7;
+    background: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    color: #848484; 
+}
+.detail-info {
+    color: #444;
+}
+.detail-info .dt {
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+}
+.arrow:before {
+    content: '\EA3D';
+}
+.detail-info .dd {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-top: 1px solid #ececec;
+    height: 40px;
+    line-height: 40px;
+}
+.sec-head{
+    color: #06A0E0;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ececec;
+    font-size: 16px;  
+}

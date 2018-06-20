@@ -1,0 +1,22 @@
+<view class='body'>
+  <view class='banner'>
+    <image src='../../../../img/24.jpg'></image>
+  </view>
+  <view class='section'>
+    <view class='detail-info'>
+      <view class='dt'>{{dt}}</view>
+      <view class='dd'>
+        <text> {{data}}</text>
+        <text class='arrow'></text>
+      </view>
+      <view class='dd'>{{prompt}}</view>
+      <view class='dd'>费用：{{price}}元起</view>
+    </view>
+  </view>
+  <view class='sign '>
+    <view class='section'>
+      <view class='sec-head'>报名须知</view>
+      <view>本次活动需收取{{price}}元</view>
+    </view>
+  </view>
+</view>

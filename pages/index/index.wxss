@@ -126,19 +126,20 @@
   margin-bottom: 10px;
   position: relative;
 }
-.diagram_img:hover .diagram_text{
+/* .diagram_img:hover .diagram_text{
   color: #fff;
   background: #7E7E7E;  
   display: block;
-}
+} */
 
 .diagram_text {
-   display: none; 
+   /* display: none;  */
   position: absolute;
   left: 5px;
   bottom: 5px;
   letter-spacing: 5px;
   font-size: 14px;
+  background:#fff;
 }
 
 /* .diagram_img:hover .diagram_text{

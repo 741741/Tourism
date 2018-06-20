@@ -7,6 +7,7 @@
     "pages/my/my",
     "pages/my/map/map",
     "pages/my/trip/trip",
+    "pages/my/drawing/drawing",
     "pages/my/notepad/notepad",
     "pages/my/addnote/addnote",
     "pages/my/calculation/calculation",
@@ -17,6 +18,7 @@
     "pages/game/snack/snack",
     "pages/FourSmall/strategy/strategy",
     "pages/FourSmall/plaything/plaything",
+    "pages/FourSmall/plaything/control/control",
     "pages/FourSmall/together/together",
     "pages/FourSmall/delicious/delicious",
     "pages/FourSmall/delicious/delicacy/delicacy"

@@ -34,8 +34,8 @@
   </view>
  
 
-
-  <view class='operation'>
+<!-- 
+   <view class='operation'>
     <view class='list'>
       <view class='list_img'>
         <image src='../../../img/35 (2).png'></image>
@@ -48,5 +48,15 @@
       </view>
       <text>吃喝玩乐</text>
     </view>
+  </view> -->
+  <view class='guessLike'> 
+    <view class='guess '> 猜你喜欢</view>   
+    <view class='productList' wx:for="{{[0,1,2]}}">
+      <view wx:for="{{what}}" class='list_cont'>
+      <view class='img'><image src="{{item.imgs}}"></image></view>
+      <view class='h3'>{{item.h3}}</view>
+      <view class='price'><text>{{item.money}}</text>元起</view>
+    </view> 
+  </view> 
   </view>
 </view>

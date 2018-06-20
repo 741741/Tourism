@@ -7,7 +7,7 @@
 }
 .rest{
   position: relative;
-  width: 17%;
+  width: 19%;
 }
 .activity{
   font-size: 14px;
@@ -21,7 +21,18 @@
     border-style:solid;
     border-color:#444444 transparent transparent;
     position:absolute;
-    top:14px;
+    top:9px;
+    right:-10px;
+}
+.restaurant text.triangles{
+   display:block;
+    width:0;
+    height:0;
+    border-width:5px 5px 0;
+    border-style:solid;
+    border-color:#06A0E0 transparent transparent;
+    position:absolute;
+    top:9px;
     right:-10px;
 }
 /* 隐藏框开始 */
@@ -48,7 +59,7 @@
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     align-items: flex-start;
-    top: 55px;
+    top: 42px;
     bottom: 0px;
     transform: translate3d(0px, 0px, 0px);
 }
@@ -144,7 +155,6 @@
 }
 .hideshow{
   color: #06A0E0;
-  border-color:#444444 transparent transparent;
 }
 
 /* 隐藏框开始 */

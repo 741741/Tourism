@@ -1,12 +1,12 @@
 <view>
   <view class='restaurant'>
-    <view class="rest  hide{{showView?'show':''}}">
+    <view class="rest  hide {{showView?'show':''}}">
      <text class="activity " bindtap="onChangeShowState" >全部餐厅</text>
      <text class="triangle hide{{showView?'show':''}}"></text>
     </view>
     <view class="rest hide{{showView?'':'show'}}">
      <text class="activity   " bindtap="onChangeShowState">全部餐厅</text>
-     <text class="triangle hide{{showView?'':'show'}}"></text>
+     <text class="triangles hide{{showView?'':'show'}}"></text>
     </view> 
     <!-- <view class="rest">
      <text class="activity" >距离不限</text>

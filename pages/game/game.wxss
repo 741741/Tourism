@@ -1,6 +1,6 @@
 .game{
   width: 100%;
-  height: auto;
+  height: 100vh;
   background: #F1F2F6;
   padding: 15px 10px;
 }

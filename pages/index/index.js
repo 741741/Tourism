@@ -7,14 +7,16 @@ Page({
   data: {
     motto: '来一场说走就走的旅行',
     objectArray: [
-      { id: 4, unique: '攻略', img: '../../img/20.jpg', imges: '../../img/31.png', jump_url: '../FourSmall/strategy/strategy' },
-      { id: 3, unique: '玩乐', img: '../../img/22.jpg', imges: '../../img/32.png', jump_url: '../FourSmall/plaything/plaything' },
-      { id: 2, unique: '同游', img: '../../img/27.jpg', imges: '../../img/37.png', jump_url: '../FourSmall/together/together' },
-      { id: 1, unique: '美食', img: '../../img/23.jpg', imges: '../../img/34.png', jump_url: '../FourSmall/delicious/delicious' },
+      { id: 1, unique: '攻略', img: '../../img/20.jpg', imges: '../../img/31.png', jump_url: '../FourSmall/strategy/strategy' },
+      { id: 2, unique: '玩乐', img: '../../img/22.jpg', imges: '../../img/32.png', jump_url: '../FourSmall/plaything/plaything' },
+      { id: 3, unique: '同游', img: '../../img/27.jpg', imges: '../../img/37.png', jump_url: '../FourSmall/together/together' },
+      { id: 4, unique: '美食', img: '../../img/23.jpg', imges: '../../img/34.png', jump_url: '../FourSmall/delicious/delicious' },
+      // { id: 7, unique: '美食', img: '../../img/23.jpg', imges: '../../img/34.png', jump_url: '../FourSmall/delicious/delicious' }
     ],
     autoplay: true,//是否自动切换
     interval: 2000,//自动切换时间间隔
     duration: 1000, //滑动动画时长
+    
     Recommended: [
       { id: 1, title: '为您推荐',
         img:[
@@ -33,7 +35,8 @@ Page({
           { imges: '../../img/27.jpg', text: '三亚海上乐园'}
         ]
       },
-    ]
+    ],
+    count: 0
   },
   gotoIndex: function (e) {
     // switchTab跳到有底部tab栏的
@@ -105,20 +108,43 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    let self = this;
+    setTimeout(()=>{
+      //扩展运算符（...），它用于把一个数组转化为用逗号分隔的参数序列，它常用在不定参数个数时的函数调用
+      let arr = self.data.Recommended,max = Math.max(...arr);
+      for(let i = max + 1;i<max+3;++i){
+        arr.unshift(i);
+      }
+      self.setData({ Recommended:arr});
+      wx.stopPullDownRefresh();
+    },1000)
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    let arr = this.data.Recommended, max = Math.max(...arr);
+    if (this.data.cont > 3) {
+      for (let i = max + 1; i = max + 5; ++i) {
+        arr.push(i);
+      }
+      this.setData({
+        Recommended: arr,
+        cont: ++this.data.cont
+      })
+    } else {
+      wx.showToast({
+        title: '没有更多的数据了',
+        image: '../../img/38.png'
+      })
+    }
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+   
   }
 })

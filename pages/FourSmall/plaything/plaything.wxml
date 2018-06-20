@@ -2,6 +2,7 @@
   <view class='play_title'>
     <view class='activities' >
       <text class="activity hide {{showView?'show':''}}">全部活动</text>
+      <!-- <text class='zwui-iconfont icon-arrow-down animate-rotate'></text> -->
        <!-- <text class="activity hide {{showView?'':'show'}}" bindtap='sel'>发现城市</text>  -->
       <!-- <text class='triangle'></text> -->
     </view>
@@ -16,7 +17,7 @@
 
 
   <view class='paly_city' wx:for="{{[0,1,2]}}">
-    <view class='city' wx:for="{{city}}" wx:key="item.id">
+    <view class='city' wx:for="{{city}}" wx:key="item.id" bindtap='Jump'>
       <view class='imgbox'>
         <view class='text'>{{item.text}}</view>
         <image src='{{item.img}}' class='bg'></image>

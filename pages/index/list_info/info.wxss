@@ -113,3 +113,62 @@
   margin-right: 10px;
 }
 /* 相关景点 */
+
+
+/* 猜你喜欢 */
+.guessLike{
+  background-color: #fff;
+  padding-top: 10px; 
+}
+.guess{
+  text-align: center;
+  font-weight: bold;
+}
+.productList{
+    width: 100%;
+    padding-bottom: 4rem;
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+}
+.list_cont{
+    width: 50%;
+    float: left;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+.list_cont image {
+    display: block;    
+    width: 88%;
+    height: 150px;
+}
+.list_cont .h3{
+    height: 35px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height:18px;
+    color: #1f2023;
+    width: 93%;
+    padding-top: 10px;
+    word-break: break-all;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.list_cont .price{
+    width: 100%;
+    line-height: 14px;
+    font-size:10px;
+    font-weight: 400;
+    color: rgba(31,32,35,.4);
+    padding-top: 10px;
+}
+.list_cont .price  text{
+    font-weight: 500;
+    font-style: normal;
+    color: #ff7467;
+}
+/* 猜你喜欢 */

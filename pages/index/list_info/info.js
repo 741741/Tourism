@@ -9,7 +9,13 @@ Page({
       { id: '1', img: '../../../img/22.jpg'},
       { id: '2', img: '../../../img/27.jpg'},
       { id: '3', img: '../../../img/41.jpg'},
-    ]
+    ],
+    what:[
+      { id: '1', imgs: '../../../img/11.jpg', h3:'杭州直飞日本札幌(北海道)4天/5天往返含税机票',money:'1999'},
+      { id: '2', imgs: '../../../img/24.jpg', h3: '[暑期][拒签全退]上海/杭州直飞东京/大阪/冲绳/北海道5-7天往返含税机票(赠送全程WIFI+日上免税券)', money: '3999' },
+      { id: '3', imgs: '../../../img/23.jpg', h3: '杭州直飞日本札幌(北海道)4天/5天往返含税机票', money: '2999' },
+    ],
+    count: 0
   },
 
   /**
@@ -51,14 +57,37 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+    let self = this;
+    setTimeout(() => {
+      //扩展运算符（...），它用于把一个数组转化为用逗号分隔的参数序列，它常用在不定参数个数时的函数调用
+      let arr = self.data.what, max = Math.max(...arr);
+      for (let i = max + 1; i < max + 3; ++i) {
+        arr.unshift(i);
+      }
+      self.setData({ what: arr });
+      wx.stopPullDownRefresh();
+    }, 1000)
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+    let arr = this.data.what, max = Math.max(...arr);
+    if (this.data.cont > 3) {
+      for (let i = max + 1; i = max + 5; ++i) {
+        arr.push(i);
+      }
+      this.setData({
+        what: arr,
+        cont: ++this.data.cont
+      })
+    } else {
+      wx.showToast({
+        title: '没有更多的数据了',
+        image: '../../../img/38.png'
+      })
+    }
   },
 
   /**

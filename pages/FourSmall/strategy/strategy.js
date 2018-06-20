@@ -37,7 +37,8 @@ Page({
           { id: '4', text: '签证', img: '../../../img/27.jpg' }
         ]
       }
-    ]
+    ],
+    count: 0
   },
   swichNav: function (e) {
     let cur = e.target.dataset.current;
@@ -87,14 +88,37 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+    let self = this;
+    setTimeout(() => {
+      //扩展运算符（...），它用于把一个数组转化为用逗号分隔的参数序列，它常用在不定参数个数时的函数调用
+      let arr = self.data.group, max = Math.max(...arr);
+      for (let i = max + 1; i < max + 3; ++i) {
+        arr.unshift(i);
+      }
+      self.setData({ group: arr });
+      wx.stopPullDownRefresh();
+    }, 1000)
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+    let arr = this.data.group, max = Math.max(...arr);
+    if (this.data.cont > 3) {
+      for (let i = max + 1; i = max + 5; ++i) {
+        arr.push(i);
+      }
+      this.setData({
+        group: arr,
+        cont: ++this.data.cont
+      })
+    } else {
+      wx.showToast({
+        title: '没有更多的数据了',
+        image: '../../../img/38.png'
+      })
+    }
   },
 
   /**

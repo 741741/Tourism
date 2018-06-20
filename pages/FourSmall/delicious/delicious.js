@@ -28,7 +28,8 @@ Page({
       { id: '4', restaurant: '湘菜' }, { id: '5', restaurant: '海鲜   ' }
     ],
     currentTab:0,
-    showView: true
+    showView: true,
+    count: 0
   },
   swichNav:function(e){
     this.setData({
@@ -94,11 +95,48 @@ Page({
   onLoad: function (options) {
     // 生命周期函数--监听页面加载
     showView: (options.showView == "true" ? true : false)
-  }
-  , onChangeShowState: function () {
+  },
+  onChangeShowState: function () {
     var that = this;
     that.setData({
       showView: (!that.data.showView)
     })
-  }
+  },
+  /**
+  * 页面相关事件处理函数--监听用户下拉动作
+  */
+  onPullDownRefresh: function () {
+    let self = this;
+    setTimeout(() => {
+      //扩展运算符（...），它用于把一个数组转化为用逗号分隔的参数序列，它常用在不定参数个数时的函数调用
+      let arr = self.data.scroll, max = Math.max(...arr);
+      for (let i = max + 1; i < max + 3; ++i) {
+        arr.unshift(i);
+      }
+      self.setData({ scroll: arr });
+      wx.stopPullDownRefresh();
+    }, 1000)
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+    let arr = this.data.scroll, max = Math.max(...arr);
+    if (this.data.cont > 3) {
+      for (let i = max + 1; i = max + 5; ++i) {
+        arr.push(i);
+      }
+      this.setData({
+        scroll: arr,
+        cont: ++this.data.cont
+      })
+    } else {
+      wx.showToast({
+        title: '没有更多的数据了',
+        image: '../../../img/38.png'
+      })
+    }
+  },
+
 })

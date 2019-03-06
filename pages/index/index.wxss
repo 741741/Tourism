@@ -5,20 +5,18 @@
 }
 .travel_header{
   text-align: center;
-  padding-top: 10px;
 }
 
 /* 滚动开始 */
 .animation{
   width: 100%;
-  height: 125px;
+  height:200px;
   background: paleturquoise;
-  paddimg-top: 10px; 
   overflow: hidden;
 }
 .swiper-item{
  width: 100%;
- height: 125px;
+ height: 200px;
  background: pink; 
  text-align: center;
  line-height: 150px;

@@ -6,6 +6,7 @@ Page({
   data: {
     motto: '来一场说走就走的旅行',
     objectArray: [
+      { id: 6, unique: '我的表单', img: '../../img/41.jpg', imges: '../../img/4.png', jump_url: '../my/inputbox/inputbox' },
       { id: 5, unique: '我的画布', img: '../../img/41.jpg', imges: '../../img/4.png', jump_url: '../my/drawing/drawing' },
       { id: 4, unique: '旅程日记', img: '../../img/20.jpg', imges: '../../img/1.png', jump_url: '../my/notepad/notepad' },
       { id: 3, unique: '我的足迹', img: '../../img/20.jpg', imges: '../../img/1.png', jump_url: '../my/trip/trip'},

@@ -1018,3 +1018,33 @@ icon {
   color: #09BB07;
   white-space: nowrap;
 }
+
+
+.regcode {
+  position: relative;
+}
+
+.regcode button {
+  border-radius: 10rpx;
+  background-color: #3879d9;
+  color: #fff;
+   height: 54rpx;
+  line-height: 54rpx;
+  font-size: 23rpx;
+  width: 170rpx;
+   margin-top: -2%;
+ }
+ 
+ .regcode input {
+   width: 100%;
+ }
+ 
+ .code {
+  position: relative;
+  width: 100%;
+ }
+ .code button {
+   position: absolute;
+   top: 30rpx;
+   right: 0;
+ }

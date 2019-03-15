@@ -11,6 +11,7 @@
     "pages/my/notepad/notepad",
     "pages/my/addnote/addnote",
     "pages/my/calculation/calculation",
+    "pages/my/inputbox/inputbox",
     "pages/login/login",
     "pages/more/more",
     "pages/game/game",

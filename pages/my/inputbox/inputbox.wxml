@@ -133,6 +133,14 @@
                     </view>
                 </view>
             </view>
+	    
+	    <text>单张图片上传</text>
+	    <view>
+		 <image src="{{imageUrl}}"></image> 
+	    </view>   
+	    <button bindtap="chooseImg">选择图片</button>
+
+	    
             <view class="button-sp-area">
                 <button class="weui-btn" type="primary" formType="submit">提交</button>
             </view>

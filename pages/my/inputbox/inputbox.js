@@ -1,6 +1,7 @@
 import WxValidate from '../../../utils/WxValidate.js'
 const App = getApp()
 
+var total = [];
 Page({
   data: {
     form: {
@@ -52,7 +53,8 @@ Page({
       '英国',
     ],
     date: '1990-01-01',
-    text:'获取验证码'
+    text:'获取验证码',
+    perImgSrc: []
     // component: App.components[2],
   },
   onLoad() {
@@ -242,6 +244,36 @@ Page({
   bindDateChange(e) {
     this.setData({
       date: e.detail.value
+    })
+  },
+   chooseImg: function () {
+    var that = this;
+    wx.chooseImage({
+      count: 9, // 默认9
+      sizeType: ['original'], // 可以指定是原图还是压缩图，默认二者都有
+      sourceType: ['album'], // 可以指定来源是相册还是相机，默认二者都有
+      success: function (res) {
+        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+        var tempFilePaths = res.tempFilePaths;
+        console.info(res.tempFilePaths.length);
+        that.uploadFile2(tempFilePaths, 0);
+      }
+    })
+  }, uploadFile2: function (file, i) {//递归调用
+    var that = this;
+    wx.uploadFile({
+      url: 'http://localhost:8080/web/uploadImage', //仅为示例，非真实的接口地址
+      filePath: file[i],
+      name: 'file',
+      success: function (res) {
+        var obj = new Object();
+        obj.ind = i + 1;
+        var data = res.data;
+        var resultData = JSON.parse(res.data);
+        that.setData({
+          imageUrl: resultData.url
+        });
+      }
     })
   }
 })

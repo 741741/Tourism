@@ -15,6 +15,8 @@ Page({
       slider: '',
       agree: '',
       textarea: '',
+      name:'',
+      regcode:''
     },
     radio: [{
       name: '男',
@@ -49,6 +51,8 @@ Page({
       '美国',
       '英国',
     ],
+    date: '1990-01-01',
+    text:'获取验证码'
     // component: App.components[2],
   },
   onLoad() {
@@ -86,6 +90,15 @@ Page({
       assistance: {
         required: true,
         assistance: true,
+      },
+       // 配置false可关闭验证
+      regcode: {
+        required: true,
+        minlength: 6
+      },
+      name: {
+       required: true,
+       rangelength: [2, 4]
       },
       email: {
         required: true,
@@ -134,6 +147,14 @@ Page({
       },
       assistance: {
         required: '请勾选1-2个敲码助手',
+      },
+      regcode: {
+        required: '请输入验证码',
+        minlength: '请输入正确的验证码'
+      },
+      name:{
+        required: '请输入姓名',
+        rangelength: '请输入2~4个汉字个汉字'
       },
       email: {
         required: '请输入邮箱',
@@ -217,4 +238,10 @@ Page({
       'form.countryIndex': value,
     })
   },
+   //日历
+  bindDateChange(e) {
+    this.setData({
+      date: e.detail.value
+    })
+  }
 })
